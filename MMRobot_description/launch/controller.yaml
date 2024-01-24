@@ -1,0 +1,63 @@
+MMRobot:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Position Controllers --------------------------------------
+  SteeringFrontRight_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: SteeringFrontRight
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  SteeringRearRight_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: SteeringRearRight
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  SteeringFrontLeft_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: SteeringFrontLeft
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  SteeringRearLeft_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: SteeringRearLeft
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  WheelRearLeft_position_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: WheelRearLeft
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  WheelRearRight_position_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: WheelRearRight
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  WheelFrontRight_position_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: WheelFrontRight
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  WheelFrontLeft_position_controller:
+    type: velocity_controllers/JointVelocityController
+    joint: WheelFrontLeft
+    pid: {p: 10.0, i: 0.1, d: 0.10}
+  Joint0_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint0
+    pid: {p: 30.0, i: 30.0, d: 5.0}
+  Joint1_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint1
+    pid: {p: 30.0, i: 30.0, d: 5.0}
+  Joint2_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint2
+    pid: {p: 30.0, i: 30.0, d: 5.0}
+  Joint3_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint3
+    pid: {p: 100.0, i: 10, d: 1.0}
+  Joint4_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint4
+    pid: {p: 100.0, i: 10, d: 1.0}
+  Joint5_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Joint5
+    pid: {p: 20.0, i: 2, d: 0.20}
