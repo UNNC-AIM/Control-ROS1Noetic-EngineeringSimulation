@@ -1,0 +1,420 @@
+<?xml version="1.0" ?>
+<robot name="mm_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mm_robot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find mm_robot_description)/urdf/mm_robot.trans" />
+<xacro:include filename="$(find mm_robot_description)/urdf/mm_robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.13936532995843443 -9.080617415694634e-05 0.16439569784153932" rpy="0 0 0"/>
+    <mass value="7.386616725586422"/>
+    <inertia ixx="0.26522" iyy="0.292094" izz="0.467395" ixy="-5.6e-05" iyz="-0.0" ixz="0.0099"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="steering_1">
+  <inertial>
+    <origin xyz="-9.780192431141366e-06 -0.0021721078468262822 -0.022479075618375838" rpy="0 0 0"/>
+    <mass value="0.28537304269600217"/>
+    <inertia ixx="0.000404" iyy="0.000329" izz="0.000405" ixy="-0.0" iyz="-1.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.32829 0.195092 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.32829 0.195092 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_1">
+  <inertial>
+    <origin xyz="-9.973790832118468e-08 0.010500452083825579 -3.5234591503480184e-07" rpy="0 0 0"/>
+    <mass value="0.1516370852065331"/>
+    <inertia ixx="0.000151" iyy="0.000272" izz="0.000151" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.32829 0.205592 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.32829 0.205592 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="steering_4">
+  <inertial>
+    <origin xyz="-9.780192431481372e-06 -0.0021721078468262545 -0.02247907561837581" rpy="0 0 0"/>
+    <mass value="0.28537304269600217"/>
+    <inertia ixx="0.000404" iyy="0.000329" izz="0.000405" ixy="-0.0" iyz="-1.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06171 0.195092 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06171 0.195092 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_4">
+  <inertial>
+    <origin xyz="-9.97379089734407e-08 0.010500452083825412 -3.5234591501398516e-07" rpy="0 0 0"/>
+    <mass value="0.1516370852065331"/>
+    <inertia ixx="0.000151" iyy="0.000272" izz="0.000151" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06171 0.205592 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06171 0.205592 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_4.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="steering_3">
+  <inertial>
+    <origin xyz="-9.780192431474433e-06 -0.0021721078468269206 -0.022479075618374936" rpy="0 0 0"/>
+    <mass value="0.28537304269600217"/>
+    <inertia ixx="0.000404" iyy="0.000329" izz="0.000405" ixy="-0.0" iyz="-1.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06171 -0.194908 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06171 -0.194908 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="steering_2">
+  <inertial>
+    <origin xyz="-9.780192430919321e-06 -0.0021721078468269206 -0.022479075618375005" rpy="0 0 0"/>
+    <mass value="0.28537304269600217"/>
+    <inertia ixx="0.000404" iyy="0.000329" izz="0.000405" ixy="-0.0" iyz="-1.3e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.32829 -0.194908 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.32829 -0.194908 -0.096382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/steering_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_2">
+  <inertial>
+    <origin xyz="-9.973790837669583e-08 -0.01049954791617519 -3.523459140356011e-07" rpy="0 0 0"/>
+    <mass value="0.1516370852065331"/>
+    <inertia ixx="0.000151" iyy="0.000272" izz="0.000151" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.32829 -0.205408 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.32829 -0.205408 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_2.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="wheel_3">
+  <inertial>
+    <origin xyz="-9.97379084044514e-08 0.010500452083824968 -3.5234591402172333e-07" rpy="0 0 0"/>
+    <mass value="0.1516370852065331"/>
+    <inertia ixx="0.000151" iyy="0.000272" izz="0.000151" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06171 -0.184408 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06171 -0.184408 -0.058882" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/wheel_3.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link0_1">
+  <inertial>
+    <origin xyz="1.041027684322497e-05 0.0018946388177457875 0.06524902449474013" rpy="0 0 0"/>
+    <mass value="0.8589628029763865"/>
+    <inertia ixx="0.001468" iyy="0.001247" izz="0.001359" ixy="-0.0" iyz="1.3e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00171 9.2e-05 -0.275382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00171 9.2e-05 -0.275382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link0_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link1_1">
+  <inertial>
+    <origin xyz="-9.973734827980509e-08 -0.007499547916175811 0.19999964765409523" rpy="0 0 0"/>
+    <mass value="0.789361514837713"/>
+    <inertia ixx="0.017405" iyy="0.018371" izz="0.000996" ixy="-0.0" iyz="0.0" ixz="-1e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00171 0.052092 -0.345382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00171 0.052092 -0.345382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link2_1">
+  <inertial>
+    <origin xyz="0.007175752452598404 0.05257186254283141 0.030501347194783035" rpy="0 0 0"/>
+    <mass value="1.2656592304751098"/>
+    <inertia ixx="0.00368" iyy="0.003628" izz="0.001872" ixy="1.8e-05" iyz="3.6e-05" ixz="-0.00046"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.00171 0.052092 -0.745382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.00171 0.052092 -0.745382" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link3_1">
+  <inertial>
+    <origin xyz="0.2437425015591727 2.045304914090367e-06 1.081407555392211e-06" rpy="0 0 0"/>
+    <mass value="0.6902582157110899"/>
+    <inertia ixx="0.000806" iyy="0.018655" izz="0.018262" ixy="-0.0" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.06271 9.2e-05 -0.833482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.06271 9.2e-05 -0.833482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="link4_1">
+  <inertial>
+    <origin xyz="0.05667762676748517 0.00035679205090587016 -0.019967654830373105" rpy="0 0 0"/>
+    <mass value="0.20163942865122017"/>
+    <inertia ixx="0.000116" iyy="0.000173" izz="0.000175" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.46371 9.2e-05 -0.853482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.46371 9.2e-05 -0.853482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/link4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="gripper_1">
+  <inertial>
+    <origin xyz="0.08753920797157067 4.834353046381871e-06 2.6502372170167376e-06" rpy="0 0 0"/>
+    <mass value="0.3800741084261242"/>
+    <inertia ixx="0.000827" iyy="0.000915" izz="0.000915" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.55671 9.2e-05 -0.833482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/gripper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.55671 9.2e-05 -0.833482" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mm_robot_description/meshes/gripper_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="right_rear_str" type="continuous">
+  <origin xyz="-0.32829 -0.195092 0.096382" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="steering_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="right_rear_vel" type="continuous">
+  <origin xyz="0.0 -0.0105 -0.0375" rpy="0 0 0"/>
+  <parent link="steering_1"/>
+  <child link="wheel_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="right_front_str" type="continuous">
+  <origin xyz="0.06171 -0.195092 0.096382" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="steering_4"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="right_front_vel" type="continuous">
+  <origin xyz="0.0 -0.0105 -0.0375" rpy="0 0 0"/>
+  <parent link="steering_4"/>
+  <child link="wheel_4"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="left_front_str" type="continuous">
+  <origin xyz="0.06171 0.194908 0.096382" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="steering_3"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="left_rear_str" type="continuous">
+  <origin xyz="-0.32829 0.194908 0.096382" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="steering_2"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="left_rear_vel" type="continuous">
+  <origin xyz="0.0 0.0105 -0.0375" rpy="0 0 0"/>
+  <parent link="steering_2"/>
+  <child link="wheel_2"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_front_vel" type="continuous">
+  <origin xyz="0.0 -0.0105 -0.0375" rpy="0 0 0"/>
+  <parent link="steering_3"/>
+  <child link="wheel_3"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="joint0" type="continuous">
+  <origin xyz="0.00171 -9.2e-05 0.275382" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="link0_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="joint1" type="continuous">
+  <origin xyz="0.0 -0.052 0.07" rpy="0 0 0"/>
+  <parent link="link0_1"/>
+  <child link="link1_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="joint2" type="continuous">
+  <origin xyz="0.0 0.0 0.4" rpy="0 0 0"/>
+  <parent link="link1_1"/>
+  <child link="link2_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+</joint>
+
+<joint name="joint3" type="continuous">
+  <origin xyz="0.061 0.052 0.0881" rpy="0 0 0"/>
+  <parent link="link2_1"/>
+  <child link="link3_1"/>
+  <axis xyz="-1.0 0.0 -0.0"/>
+</joint>
+
+<joint name="joint4" type="continuous">
+  <origin xyz="0.401 0.0 0.02" rpy="0 0 0"/>
+  <parent link="link3_1"/>
+  <child link="link4_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+</joint>
+
+<joint name="joint5" type="continuous">
+  <origin xyz="0.093 0.0 -0.02" rpy="0 0 0"/>
+  <parent link="link4_1"/>
+  <child link="gripper_1"/>
+  <axis xyz="-1.0 0.0 0.0"/>
+</joint>
+
+</robot>
